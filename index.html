@@ -9,16 +9,39 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background: url('background-beranda.jpg') no-repeat center center/cover;
             color: #333;
         }
         header {
-            background-color: #222;
+            background: url('background-header.jpg') no-repeat center center/cover;
             color: white;
             text-align: center;
-            padding: 20px;
-            font-size: 24px;
+            padding: 60px 20px;
+            font-size: 32px;
             font-weight: bold;
+            position: relative;
+        }
+        header::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+        header h1 {
+            position: relative;
+            z-index: 1;
+        }
+        nav {
+            background: #222;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
         }
         .container {
             width: 80%;
@@ -52,28 +75,35 @@
 </head>
 <body>
     <header>
-        Sentira - Jasa Furniture Minimalis & Elegan
+        <h1>SENTIRA</h1>
     </header>
     
+    <nav>
+        <a href="#gallery">Galeri</a>
+        <a href="#services">Layanan</a>
+        <a href="#testimonials">Testimoni</a>
+        <a href="#contact">Kontak</a>
+    </nav>
+
     <div class="container">
-        <section class="gallery">
+        <section id="gallery" class="gallery">
             <h2>Galeri Produk</h2>
             <p>Berikut beberapa contoh furniture yang kami buat.</p>
             <img src="image1.jpg" alt="Furniture 1">
             <img src="image2.jpg" alt="Furniture 2">
         </section>
 
-        <section class="services">
+        <section id="services" class="services">
             <h2>Layanan Kami</h2>
             <p>Kami menyediakan jasa pembuatan furniture kustom sesuai kebutuhan Anda.</p>
         </section>
 
-        <section class="testimonials">
+        <section id="testimonials" class="testimonials">
             <h2>Testimoni Pelanggan</h2>
             <p>“Hasilnya sangat memuaskan, kualitas terbaik!” - Pelanggan A</p>
         </section>
 
-        <section class="contact">
+        <section id="contact" class="contact">
             <h2>Kontak & Pemesanan</h2>
             <p>Hubungi kami melalui WhatsApp: 081234567890</p>
         </section>

@@ -1,73 +1,88 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Blog Gue</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Kehidupan - oleh Gue</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f7f7f7;
+      padding: 0;
+      background: #f4f4f4;
       color: #333;
     }
     header {
-      background: #222;
-      color: white;
-      padding: 30px 20px;
+      background: #333;
+      color: #fff;
+      padding: 20px 0;
       text-align: center;
     }
-    main {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 0 20px;
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
     }
-    article {
-      background: white;
+    section {
       padding: 20px;
-      margin-bottom: 30px;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    }
-    h2 {
-      margin-top: 0;
-    }
-    time {
-      font-size: 0.9rem;
-      color: #777;
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     footer {
       text-align: center;
       padding: 20px;
-      background: #eee;
-      font-size: 0.9rem;
+      background: #333;
+      color: #fff;
+      margin-top: 20px;
+    }
+    article h3 {
+      margin-top: 0;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Blog Barang Gue</h1>
-    <p>Tempat gue nulis suka-suka</p>
+    <h1>Blog Kehidupan</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">Tentang</a>
+      <a href="#posts">Tulisan</a>
+      <a href="#contact">Kontak</a>
+    </nav>
   </header>
 
-  <main>
-    <article>
-      <h2>Postingan Pertama</h2>
-      <time datetime="2025-05-18">18 Mei 2025</time>
-      <p>Halo dunia! Ini postingan pertama gue di blog pribadi ini. Nantinya gue bakal nulis tentang apa aja—mulai dari pengalaman, opini, atau hal random yang pengen gue share.</p>
-    </article>
+  <section id="home">
+    <h2>Selamat Datang</h2>
+    <p>Ini adalah blog pribadi tempat gue cerita soal hidup, pelajaran, dan proses bertumbuh.</p>
+  </section>
 
+  <section id="about">
+    <h2>Tentang Gue</h2>
+    <p>Gue orang biasa yang suka nulis tentang pengalaman hidup. Kadang susah, kadang lucu, kadang bikin mikir. Semua ditulis apa adanya.</p>
+  </section>
+
+  <section id="posts">
+    <h2>Tulisan Terbaru</h2>
     <article>
-      <h2>Kehidupan di 2025</h2>
-      <time datetime="2025-05-17">17 Mei 2025</time>
-      <p>Gak nyangka udah 2025 aja. Teknologi makin gila, dan sekarang gue lagi belajar bikin website sendiri buat nulis-nulis hal pribadi. Kalo lo baca ini, makasih udah mampir!</p>
+      <h3>Cerita Pertama: Awal Gue Mulai Nulis</h3>
+      <p><em>18 Mei 2025</em></p>
+      <p>Hari ini gue mulai blog ini karena gue pengen berbagi pengalaman yang mungkin bisa relate sama lo semua...</p>
+      <a href="#">Baca selengkapnya</a>
     </article>
-  </main>
+  </section>
+
+  <section id="contact">
+    <h2>Kontak</h2>
+    <p>Email: bloggue@email.com</p>
+  </section>
 
   <footer>
-    &copy; 2025 Blog Barang Gue. All rights reserved.
+    <p>&copy; 2025 Blog Kehidupan - oleh Gue</p>
   </footer>
-
 </body>
 </html>

@@ -1,83 +1,134 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sentira - Jasa Furniture</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #2c3e50;
-            color: #ecf0f1;
-        }
-        header {
-            background: #34495e;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        nav {
-            background: #222;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 10px 0;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 8px 0;
-            font-size: 18px;
-            display: block;
-            padding: 10px;
-            width: 100%;
-            text-align: center;
-            transition: background 0.3s;
-        }
-        nav a:hover {
-            background: #555;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-            text-align: center;
-        }
-        footer {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Barang Gw - Toko Online Multi Produk</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #fff;
+    }
+    header {
+      background-color: #e63946;
+      padding: 20px;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    .tagline {
+      font-size: 1.2rem;
+      margin-top: 5px;
+      color: #f1faee;
+      font-weight: 500;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .product-card {
+      background-color: #1d3557;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(230,57,70,0.4);
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(230,57,70,0.7);
+    }
+    .product-image {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      height: 180px;
+      margin-bottom: 10px;
+    }
+    .product-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: #f1faee;
+    }
+    .product-price {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #a8dadc;
+      margin-bottom: 10px;
+    }
+    .buy-button {
+      background-color: #e63946;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+    .buy-button:hover {
+      background-color: #d62828;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #1d3557;
+      color: #f1faee;
+      margin-top: 30px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>SENTIRA</h1>
-    </header>
-    
-    <nav>
-        <a href="about.html">Tentang</a>
-        <a href="gallery.html">Galeri</a>
-        <a href="services.html">Layanan</a>
-        <a href="testimonials.html">Testimoni</a>
-        <a href="contact.html">Kontak</a>
-    </nav>
+  <header>
+    BARANG GW
+    <div class="tagline">Semua yang lo butuhin, ada di sini!</div>
+  </header>
 
-    <div class="container">
-        <h2>Selamat Datang di Sentira</h2>
-        <p>Jasa pembuatan furniture minimalis dan elegan untuk kebutuhan rumah atau kantor Anda.</p>
+  <section class="products">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x180.png?text=Produk+1" alt="Produk 1" class="product-image" />
+      <div class="product-name">Produk 1</div>
+      <div class="product-price">Rp150.000</div>
+      <a href="#" class="buy-button">Beli Sekarang</a>
     </div>
-    
-    <footer>
-        &copy; 2025 Sentira. Semua Hak Dilindungi.
-    </footer>
+
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x180.png?text=Produk+2" alt="Produk 2" class="product-image" />
+      <div class="product-name">Produk 2</div>
+      <div class="product-price">Rp250.000</div>
+      <a href="#" class="buy-button">Beli Sekarang</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x180.png?text=Produk+3" alt="Produk 3" class="product-image" />
+      <div class="product-name">Produk 3</div>
+      <div class="product-price">Rp75.000</div>
+      <a href="#" class="buy-button">Beli Sekarang</a>
+    </div>
+
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x180.png?text=Produk+4" alt="Produk 4" class="product-image" />
+      <div class="product-name">Produk 4</div>
+      <div class="product-price">Rp120.000</div>
+      <a href="#" class="buy-button">Beli Sekarang</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Barang Gw. All rights reserved.
+  </footer>
 </body>
 </html>

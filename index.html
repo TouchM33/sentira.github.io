@@ -3,98 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Virtual Pet Barang Gw</title>
-  <style>
-    body {
-      background: #fceabb;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 30px;
-    }
-    #pet {
-      width: 200px;
-      height: 200px;
-      background: url('https://i.imgur.com/OdL0XPt.png') no-repeat center/contain;
-      margin: 20px auto;
-      transition: filter 0.5s ease, opacity 0.5s ease;
-    }
-    #status {
-      font-size: 1.2rem;
-      margin: 15px 0;
-    }
-    button {
-      background: #e63946;
-      border: none;
-      color: white;
-      padding: 12px 25px;
-      margin: 5px;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    button:hover {
-      background: #d62828;
-    }
-  </style>
+  <title>Blog Barang Gue</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Virtual Pet Barang Gw</h1>
-  <div id="pet"></div>
-  <div id="status">Status: Senang</div>
-  <button onclick="feedPet()">Kasih Makan</button>
-  <button onclick="playPet()">Main</button>
 
-  <script>
-    let hunger = 0; // 0 = kenyang, 5 = lapar
-    let happiness = 5; // 0 = sedih, 5 = senang
+  <header>
+    <h1>Blog Barang Gue</h1>
+    <p>Tempat gue nulis suka-suka</p>
+  </header>
 
-    const statusEl = document.getElementById('status');
-    const petEl = document.getElementById('pet');
+  <main>
+    <article>
+      <h2>Postingan Pertama</h2>
+      <time datetime="2025-05-18">18 Mei 2025</time>
+      <p>Halo dunia! Ini postingan pertama gue di blog pribadi ini.</p>
+    </article>
 
-    function updateStatus() {
-      let statusText = '';
+    <article>
+      <h2>Kehidupan di 2025</h2>
+      <time datetime="2025-05-17">17 Mei 2025</time>
+      <p>Sekarang gue lagi belajar bikin website sendiri buat nulis-nulis hal pribadi.</p>
+    </article>
+  </main>
 
-      if (hunger >= 4) {
-        statusText = 'Lapar banget!';
-        petEl.style.filter = 'grayscale(100%)';
-      } else if (hunger >= 2) {
-        statusText = 'Lapar...';
-        petEl.style.filter = 'brightness(0.7)';
-      } else {
-        statusText = 'Senang dan kenyang!';
-        petEl.style.filter = 'none';
-      }
+  <footer>
+    &copy; 2025 Blog Barang Gue. All rights reserved.
+  </footer>
 
-      if (happiness <= 2) {
-        statusText += ' Kasian nih, dia sedih.';
-        petEl.style.opacity = '0.6';
-      } else {
-        petEl.style.opacity = '1';
-      }
-
-      statusEl.textContent = 'Status: ' + statusText;
-    }
-
-    function feedPet() {
-      hunger = Math.max(hunger - 2, 0);
-      happiness = Math.min(happiness + 1, 5);
-      updateStatus();
-    }
-
-    function playPet() {
-      happiness = Math.min(happiness + 2, 5);
-      hunger = Math.min(hunger + 1, 5);
-      updateStatus();
-    }
-
-    setInterval(() => {
-      hunger = Math.min(hunger + 1, 5);
-      happiness = Math.max(happiness - 1, 0);
-      updateStatus();
-    }, 15000); // setiap 15 detik
-
-    updateStatus();
-  </script>
 </body>
 </html>
